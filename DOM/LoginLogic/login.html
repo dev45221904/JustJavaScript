@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-100 font-sans">
+    <div id="divForm" class="bg-white p-10 rounded-xl shadow-md w-80">
+        <h2 id="h2" class="text-center text-2xl font-medium text-gray-900 mb-6">Login</h2>
+        <p id="warn"></p>
+        <form action="" id="form">
+            <label for="username" class="text-sm font-medium text-gray-600">Username:</label><br>
+            <input type="text" name="name" id="username" placeholder="Enter your name"
+                class="w-full mt-1 mb-4 px-3 py-2 border border-gray-300 rounded-md text-sm outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"><br>
+
+            <label for="password" class="text-sm font-medium text-gray-600">Password</label><br>
+            <input type="password" name="" id="password" placeholder="Enter your password"
+                class="w-full mt-1 mb-5 px-3 py-2 border border-gray-300 rounded-md text-sm outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"><br>
+            <button id="btn" type="button"
+                class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-base cursor-pointer transition-colors">
+                Login
+            </button>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

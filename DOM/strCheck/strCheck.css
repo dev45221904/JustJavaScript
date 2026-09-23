@@ -1,0 +1,54 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#head1{
+    padding-top: 00px;
+    padding-left: 450px;
+    
+}
+.main{
+    padding-left: 100px;
+    padding-right: 100px;
+    border: 1px solid black;
+    margin-left: 200px;
+    margin-right: 300px;
+    word-wrap: break-word;
+}
+#str1, #str2,#btn, #result{
+    margin-top: 20px ;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+#btn, #btn2, #btn3, #btn4{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+#btn2, #btn3, #btn4{
+    margin-left: 20px;
+}
+#pb, #pb1{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#textchange{
+    height: 150px;
+    width: 500px;
+    border-radius: 05px;
+}
+#slct{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 20px;
+}
+.opt{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}

@@ -1,0 +1,52 @@
+body{
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: 20px;
+    /* text-align: center; */
+}
+
+.heading{
+    background-color: bisque;
+    font-size: 50px;
+    color: saddlebrown;
+    text-align: center;
+}
+h4{
+    background-color: brown;
+    text-align: center;
+}
+p{
+    background-color: beige;
+    font-size: 30px;
+    text-align: center;
+}
+button{
+    background-color: azure;
+    text-align: center;
+}
+#btn{
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+}
+#btn2{
+    background-color: brown;
+    color: hotpink;
+    text-align: center;
+}
+   
+.div{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    background-color: aqua;
+    justify-content: center;
+    text-align: center;
+}
+#divP{
+    background-color: aqua;
+    font-size: 18px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
