@@ -23,11 +23,11 @@ class Counter{
         });
     }
     sqr(){
-        let dbl = document.getElementById("dbl");
-        dbl.addEventListener("click", ()=>{
-            this.inc;
-            
-            
+        let sqr = document.getElementById("dbl");
+        sqr.addEventListener("click", ()=>{
+            let NumOnScreen = this.counter.innerText;
+            let sqrr = NumOnScreen**2;
+            this.counter.innerText = sqrr;
         })
     }
     Reset(){
@@ -40,21 +40,6 @@ class Counter{
             }
         });
     }
-    Saved(){
-        let save = document.getElementById("save");
-        save.addEventListener("click",()=>{
-            this.container = document.getElementById("saved");
-            this.p = document.createElement("p");
-            this.p.innerText = `The last saved counter is ${this.counter.innerText}`;
-            let simple = this.container.appendChild(this.p);
-        });
-    }
-    eraseEntry(){
-        let erase = document.getElementById("erase");
-        erase.addEventListener("click",()=>{
-            this.container.remove(this.p);
-        });
-    }
 }
 const count = new Counter();
 count.Increment();
@@ -62,5 +47,3 @@ count.Decrement();
 count.dbl();
 count.sqr();
 count.Reset();
-count.Saved();
-count.eraseEntry();

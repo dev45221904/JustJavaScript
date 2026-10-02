@@ -4,28 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COUNTER</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Latest Tailwind CSS v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Extra interactive effects (animations only, no logic) -->
+    <style>
+        @keyframes pop {
+            0%   { transform: scale(1); }
+            40%  { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+        #counter.pop { animation: pop 0.25s ease-out; }
+
+        .press:active {
+            transform: scale(0.92);
+            transition: transform 0.05s ease;
+        }
+        .lift {
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+        }
+        .lift:hover { transform: translateY(-2px); }
+
+        #saved div {
+            animation: slideIn 0.3s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body>
-    <div id="mDiv">
-        <h1 id="head">COUNTER APPPPP!!!!!!!!!!!!!!!!!!</h1>
-        <p id="counter"></p>
-        <div id="warn"></div>
-        <div class="btn-group"> 
-            <button type="button" id="btn">++</button>
-            <button type="button" id="decrement">--</button>
-            <button type="button" id="mul">DOUBLE IT!</button>
-            <button type="button" id="dbl">SQUARE IT!</button>
-            <button type="button" id="reset">RESET</button>
-            <button type="button" id="save">SAVE</button>
-            <button type="button" id="erase">Erase All</button>
-        </div>
-        <h1>Saved Entries</h1>
-        <div id="saved">
-            
-        </div>
-        
-    </div>
+
+<body class="min-h-screen bg-gradient-to-br from-indigo-100 via-white to-purple-100 flex items-center justify-center p-6">
+
+    <div id="mDiv" class="flex flex-col items-center gap-6 w-full max-w-3xl">
+
+        <!-- Title -->
+        <h1 id="head" class="text-2xl md:text-3xl font-extrabold tracking-wide text-slate-800">
+            COUNTER APPPPP<span class="text-indigo-500">!!!!!!!!!!!!!!!!!!</span>
+        </h1>
+
+        <!-- Counter display -->
+        <p id="counter" class="text-8xl font-black text-indigo-600 min-w-[140px] text-center select-none
+                               bg-white/70 backdrop-blur rounded-3xl px-10 py-4 shadow-xl shadow-indigo-200">
+        </p>
+
+        <!-- Warning area (used by JS, untouched) -->
+        <div id="warn" class="text-sm font-semibold text-red-500"></div>
+
+        <!-- Buttons -->
+        <div class="btn-group flex flex-wrap justify-center gap-3">
+
+            <!-- Increment: green -->
+            <button type="button" id="btn"
+                class="lift press px-6 py-3 rounded-xl font-bold text-emerald-600 bg-white
+                       border-2 border-emerald-400 shadow-md shadow-emerald-200
+                       hover:bg-emerald-500 hover:text-white hover:shadow-lg hover:shadow-emerald-300">
+                ++
+            </button>
+
+            <!-- Decrement: red-ish -->
+            <button type="button" id="decrement"
+                class="lift press px-6 py-3 rounded-xl font-bold text-rose-500 bg-white
+                       border-2 border-rose-300 shadow-md shadow-rose-200
+                       hover:bg-rose-500 hover:text-white hover:shadow-lg hover:shadow-rose-300">
+                --
+            </button>
+
+            <!-- Double: indigo -->
+            <button type="button" id="mul"
+                class="lift press px-6 py-3 rounded-xl font-bold text-white bg-indigo-500
+                       shadow-md shadow-indigo-300
+                       hover:bg-indigo-600 hover:shadow-lg hover:shadow-indigo-400">
+                DOUBLE IT!
+            </button>
+
+            <!-- Square: purple -->
+            <button type="button" id="dbl"
+                class="lift press px-6 py-3 rounded-xl font-bold text-white bg-purple-500
+                       shadow-md shadow-purple-300
+                       hover:bg-purple-600 hover:shadow-lg hover:shadow-purple-400">
+                SQUARE IT!
+            </button>
+
+            <!-- RESET (counter only): amber OUTLINE — clearly different -->
+            <button type="button" id="reset"
+                class="lift press px-6 py-3 rounded-xl font-bold text-amber-600 bg-transparent
+                       border-2 border-dashed border-amber-500
+                       hover:bg-amber-100 hover:border-solid">
+                ↺ RESET
+            </button>
+
+            <!-- SAVE: teal solid -->
+           
+
     <script src="count.js"></script>
 </body>
 </html>
